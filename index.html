@@ -51,7 +51,9 @@
             </h1>
             <p class="hero-subtitle">Premium, thoughtfully curated gifts &mdash; packed to bring warmth, joy and quiet luxury into every celebration.</p>
 
-            <form class="hero-lead-form" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully! We will contact you soon.'); this.reset();">
+            <form class="hero-lead-form" name="hero-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully! We will contact you soon.'); this.reset();">
+                    <input type="hidden" name="form-name" value="hero-lead">
+                    <p hidden><label>Leave blank: <input name="bot-field"></label></p>
                 <input type="text" name="name" required placeholder="Name">
                 <input type="tel" name="phone" required placeholder="Phone">
                 <input type="email" name="email" required placeholder="Email">
@@ -226,7 +228,9 @@
                 </ul>
             </div>
             <div class="inquiry-box">
-                <form class="simple-contact-form" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully! We will contact you soon.'); this.reset();">
+                <form class="simple-contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully! We will contact you soon.'); this.reset();">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p hidden><label>Leave blank: <input name="bot-field"></label></p>
                     <div class="form-grid">
                         <div class="input-field">
                             <label>Full Name</label>
@@ -636,7 +640,9 @@
             </div>
             
             <div class="concierge-form-wrapper">
-                <form id="conciergeForm" class="multi-step-form">
+                <form id="conciergeForm" class="multi-step-form" name="concierge" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="concierge">
+                    <p hidden><label>Leave blank: <input name="bot-field"></label></p>
                     
                     <!-- Step 1: Occasion -->
                     <div class="form-step active" data-step="1">

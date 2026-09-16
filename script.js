@@ -319,3 +319,15 @@ document.addEventListener('DOMContentLoaded', () => {
   addEventListener('resize', onScroll);
   draw();
 })();
+
+/* ===== Netlify Forms: AJAX submit (keeps in-page success UI) ===== */
+document.addEventListener('submit', (e) => {
+    const form = e.target.closest('form[data-netlify]');
+    if (!form) return;
+    e.preventDefault();
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+    }).catch(() => {});
+}, true);
