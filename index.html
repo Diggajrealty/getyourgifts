@@ -55,7 +55,10 @@
         <div class="hero-product">
             <div class="hero-orbit" aria-hidden="true"></div>
             <span class="hero-edition">Thoughtfully chosen. Beautifully given.</span>
-            <img class="hero-cutout" src="images/collection/diwali-cutout.png" alt="Purple Diwali hamper with flower-shaped diyas, lavender fragrance, a green pouch and festive treats" width="1254" height="1254" fetchpriority="high">
+            <picture>
+                <source srcset="images/collection/diwali-cutout-hero.png" type="image/png">
+                <img class="hero-cutout" src="images/collection/diwali-cutout-hero.png" alt="Purple Diwali hamper with flower-shaped diyas, lavender fragrance, a green pouch and festive treats" width="900" height="900" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='images/collection/diwali-unwrapped.jpg';this.classList.add('hero-cutout-fallback');">
+            </picture>
             <div class="hero-product-caption"><span>THE FESTIVE RITUAL</span><span>Curated with care, from Bengaluru</span></div>
         </div>
         <a href="#kit-explode" class="hero-scroll" aria-label="Explore the gift story"><span>Scroll to discover</span><span aria-hidden="true">↓</span></a>

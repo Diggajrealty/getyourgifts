@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Hero entrance
         gsap.timeline({ defaults: { ease: 'power3.out' } })
-            .from('.hero-cutout', { scale: 0.94, duration: 2.4, ease: 'power2.out' })
+            .from('.hero-product picture', { scale: 0.94, duration: 2.4, ease: 'power2.out' })
             .from('.hero-eyebrow', { y: 18, opacity: 0, duration: 0.8 }, 0.25)
             .from('.hero-title .line > span', {
                 yPercent: 110, opacity: 0, duration: 1.1, stagger: 0.12

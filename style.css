@@ -1989,6 +1989,8 @@ h1, h2, h3, h4, h5, h6 {
 .gift-hero .hero-note{color:#8c7c76;font-size:10px;margin-top:10px}
 .hero-product{position:relative;min-width:0;display:flex;align-items:center;justify-content:center;aspect-ratio:1;isolation:isolate}
 .hero-cutout{width:110%;max-width:110%;height:auto;position:relative;z-index:1;filter:drop-shadow(0 32px 24px rgba(73,36,46,.16));transform:rotate(-7deg)}
+.hero-product picture{display:flex;align-items:center;justify-content:center;width:100%;height:100%;position:relative;z-index:1}
+.hero-cutout-fallback{object-fit:cover;border-radius:50%;width:92%;height:92%;filter:drop-shadow(0 22px 18px rgba(73,36,46,.16));}
 .hero-orbit{position:absolute;inset:3%;border:1px solid #cbb897;border-radius:50%;opacity:.6}
 .hero-orbit::before{content:'';position:absolute;inset:8%;border:1px solid #d9c5a5;border-radius:50%}
 .hero-edition{position:absolute;top:-24px;left:0;width:100%;text-align:center;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#937757}
