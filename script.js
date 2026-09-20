@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Hero entrance
         gsap.timeline({ defaults: { ease: 'power3.out' } })
-            .from('.hero-bg-video', { scale: 1.22, duration: 2.4, ease: 'power2.out' })
+            .from('.hero-cutout', { scale: 0.94, duration: 2.4, ease: 'power2.out' })
             .from('.hero-eyebrow', { y: 18, opacity: 0, duration: 0.8 }, 0.25)
             .from('.hero-title .line > span', {
                 yPercent: 110, opacity: 0, duration: 1.1, stagger: 0.12
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
         })
             .to('.hero-content', { y: -70, opacity: 0, ease: 'none' }, 0)
-            .to('.hero-bg-video', { y: 90, ease: 'none' }, 0);
+            .to('.hero-cutout', { y: 90, ease: 'none' }, 0);
 
         // Section reveals — reuse the existing .visible CSS transition
         ScrollTrigger.batch(fadeElements, {
@@ -120,11 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const productCards = document.querySelectorAll('.product-card');
 
     filterBtns.forEach(btn => {
+        btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
         btn.addEventListener('click', () => {
             // Remove active class from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
+            filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
             // Add active class to clicked button
             btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
 
             const filterValue = btn.getAttribute('data-filter');
 
@@ -254,70 +256,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* ===== Exploded kit: cold-fog wireframe unpack ===== */
-(function () {
-  const sec = document.getElementById('kit-explode');
-  const canvas = document.getElementById('kitCanvas');
-  if (!sec || !canvas || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const scene = document.getElementById('kitScene');
-  const ticks = document.getElementById('kitTicks');
-  const frame = sec.querySelector('.kit-frame');
-  const hint  = document.getElementById('kitHint');
-  const items = [...scene.querySelectorAll('.kit-item')];
-
-  // scattered technical annotations, seeded so they don't jump on resize
-  let seed = 20260903;
-  const rnd = () => (seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
-  ticks.innerHTML = Array.from({ length: 26 }, () => {
-    const n = 10 + Math.floor(rnd() * 30);
-    return `<b style="left:${(4 + rnd() * 92).toFixed(1)}%;top:${(4 + rnd() * 92).toFixed(1)}%">${n}</b>`;
-  }).join('');
-  const tickEls = [...ticks.children];
-
-  const START = 0.10, STEP = 0.090, DUR = 0.22;
-  const ease = t => 1 - Math.pow(1 - t, 3);
-  const clamp01 = v => (v < 0 ? 0 : v > 1 ? 1 : v);
-  const OX = 50, OY = 42;                       // closed-box origin
-
-  let ticking = false;
-  function draw() {
-    ticking = false;
-    const r = sec.getBoundingClientRect();
-    const p = clamp01(-r.top / (sec.offsetHeight - innerHeight));
-    const cw = canvas.clientWidth, ch = canvas.clientHeight;
-
-    // slow camera drift, like the reference's isometric settle
-    scene.style.setProperty('--rx', (13 - 11 * ease(p)).toFixed(2) + 'deg');
-    scene.style.setProperty('--ry', (-9 + 13 * ease(p)).toFixed(2) + 'deg');
-
-    items.forEach((el, i) => {
-      const t = ease(clamp01((p - (START + i * STEP)) / DUR));
-      const cs = getComputedStyle(el);
-      const fx = parseFloat(cs.getPropertyValue('--fx'));
-      const fy = parseFloat(cs.getPropertyValue('--fy'));
-      const box = i < 2;                        // lid + base = the closed box
-      const x = (OX + (fx - OX) * t) / 100 * cw;
-      const y = (OY + (fy - OY) * t) / 100 * ch;
-      el.style.setProperty('--tx', (x - cw / 2).toFixed(1) + 'px');
-      el.style.setProperty('--ty', (y - ch / 2).toFixed(1) + 'px');
-      el.style.setProperty('--tz', ((1 - t) * -140 + i * 6).toFixed(1) + 'px');
-      el.style.setProperty('--s', (box ? 1 : 0.62 + 0.38 * t).toFixed(3));
-      el.style.setProperty('--r', ((1 - t) * (i % 2 ? 5 : -5)).toFixed(1) + 'deg');
-      el.style.setProperty('--b', ((1 - t) * 7).toFixed(2) + 'px');   // emerge from fog
-      el.style.setProperty('--o', box ? clamp01(p / 0.06) : t.toFixed(3));
-      el.style.setProperty('--lo', t > 0.82 ? 1 : 0);
-    });
-
-    tickEls.forEach((b, i) => b.style.setProperty('--to', p > 0.1 + (i % 9) * 0.055 ? 1 : 0));
-    if (frame) frame.style.setProperty('--frame', p > 0.04 ? 1 : 0);
-    if (hint)  hint.style.setProperty('--hint', p > 0.08 ? 0 : 1);
-  }
-
-  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(draw); } };
-  addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', onScroll);
-  draw();
+/* The Art of Giving owns its animation independently of the Mesa journey. */
+(() => {
+    const section = document.querySelector('.gift-story');
+    if (!section) return;
+    const panel = section.querySelector('.gift-story-sticky');
+    const chapters = [...section.querySelectorAll('.story-chapter')];
+    const counter = section.querySelector('.story-count');
+    const motion = matchMedia('(prefers-reduced-motion: reduce)');
+    let queued = false;
+    function draw() {
+        queued = false;
+        const enabled = innerWidth > 1000 && innerHeight >= 700 && !motion.matches;
+        section.classList.toggle('gift-story-animated', enabled);
+        if (!enabled) {
+            chapters.forEach(chapter => chapter.classList.add('is-active'));
+            section.style.removeProperty('--story-progress');
+            section.style.removeProperty('--product-turn');
+            section.style.removeProperty('--product-rise');
+            return;
+        }
+        const distance = Math.max(1, section.offsetHeight - panel.clientHeight);
+        const progress = Math.max(0, Math.min(1, -section.getBoundingClientRect().top / distance));
+        section.style.setProperty('--story-progress', progress);
+        section.style.setProperty('--product-turn', (-4 + progress * 8) + 'deg');
+        section.style.setProperty('--product-rise', (12 - progress * 24) + 'px');
+        const active = Math.min(2, Math.floor(progress * 3));
+        chapters.forEach((chapter, index) => chapter.classList.toggle('is-active', index === active));
+        counter.textContent = String(active + 1).padStart(2, '0') + ' / 03';
+    }
+    const schedule = () => {
+        if (!queued) { queued = true; requestAnimationFrame(draw); }
+    };
+    addEventListener('scroll', schedule, { passive: true });
+    addEventListener('resize', schedule);
+    motion.addEventListener('change', schedule);
+    draw();
 })();
 
 /* ===== Netlify Forms: AJAX submit (keeps in-page success UI) ===== */
