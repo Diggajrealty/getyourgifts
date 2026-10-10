@@ -1,0 +1,27 @@
+﻿/* Independent comparison preview: straight rows and restrained styling. */
+.festival-brands{position:relative;isolation:isolate;overflow:hidden;background:#351e30;color:#fff6e8;padding:0 0 32px}
+.festival-brands .fb-preview-label{margin:0 0 48px;padding:13px 6%;background:#f2e8dc;color:#755c6b;border-block:1px solid #dfcfbf;font:500 10px/1.5 var(--font-body);letter-spacing:.12em;text-transform:uppercase}
+.festival-brands .fb-heading{position:relative;display:block;background:none;width:88%;max-width:1200px;margin:0 auto 35px;padding:0;text-align:left}
+.festival-brands .fb-eyebrow{margin:0 0 15px;width:36px;height:2px;background:#d8b27a}
+.festival-brands h2{font:400 clamp(32px,3.8vw,52px)/1.15 var(--font-serif);letter-spacing:-.025em;color:#fff6e8;margin:0 0 14px}
+.festival-brands .fb-subtitle{font:400 13px/1.8 var(--font-body);color:#d8c5d0;margin:0;max-width:540px}
+.festival-brands .fb-ribbons{position:relative;display:grid;gap:18px;padding:5px 0;width:100%}
+.festival-brands .fb-row{position:relative;overflow:hidden;padding:0;transform:none}
+.festival-brands .fb-row::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#351e30,transparent 5%,transparent 95%,#351e30);pointer-events:none}
+.festival-brands .fb-belt{display:flex;width:max-content;animation:fb-travel var(--fb-duration,120s) linear infinite;animation-play-state:paused;will-change:transform}
+.festival-brands.fb-in-view .fb-belt{animation-play-state:running}
+.festival-brands .fb-row:nth-child(2) .fb-belt{animation-direction:reverse}
+.festival-brands .fb-group{display:flex;gap:18px;padding:0 18px 0 0;flex-shrink:0;list-style:none;margin:0}
+.festival-brands .fb-tile{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:176px;height:88px;padding:22px 26px;background:#fffcf6;border:1px solid transparent;border-radius:4px;box-shadow:none;transition:border-color .2s,background .2s}
+.festival-brands .fb-tile img{width:100%;height:100%;object-fit:contain;display:block}
+.festival-brands .fb-tile:hover{border-color:#c5a16c;background:#fff}
+.festival-brands.fb-paused .fb-belt,.festival-brands .fb-row:focus-within .fb-belt{animation-play-state:paused}
+.festival-brands .fb-bottom{width:88%;max-width:1200px;margin:24px auto 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.festival-brands .fb-note{font:400 11px/1.7 var(--font-body);color:#cbb7c4;margin:0}
+.festival-brands .fb-toggle{background:transparent;border:1px solid #b5a0ac80;color:#f2e7ef;min-height:44px;padding:11px 18px;border-radius:4px;cursor:pointer;font:400 11px/1.5 var(--font-body)}
+.festival-brands .fb-toggle:hover{background:#ffffff0d}
+.festival-brands .fb-toggle:focus-visible,.festival-brands .fb-row:focus-visible{outline:2px solid #e1ba81;outline-offset:-2px}
+@keyframes fb-travel{to{transform:translateX(-50%)}}
+@media(hover:hover){.festival-brands .fb-row:hover .fb-belt{animation-play-state:paused}}
+@media(max-width:760px){.festival-brands{padding-bottom:26px}.festival-brands .fb-preview-label{margin-bottom:32px;font-size:9px}.festival-brands .fb-heading{margin-bottom:26px}.festival-brands h2{font-size:34px;max-width:350px}.festival-brands .fb-subtitle{font-size:12px;max-width:300px}.festival-brands .fb-ribbons{gap:14px}.festival-brands .fb-group{gap:14px;padding-right:14px}.festival-brands .fb-tile{width:142px;height:76px;padding:19px 21px}.festival-brands .fb-bottom{gap:16px;margin-top:22px}.festival-brands .fb-note{font-size:10px;max-width:155px}.festival-brands .fb-toggle{font-size:10px;padding:10px 13px;flex-shrink:0}}
+@media(prefers-reduced-motion:reduce){.festival-brands .fb-belt{animation:none;transform:none;will-change:auto}.festival-brands .fb-row{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#c3a879 #351e30}.festival-brands .fb-group[aria-hidden]{display:none}.festival-brands .fb-row::after{display:none}.festival-brands .fb-toggle{display:none}.festival-brands .fb-tile{transition:none}}

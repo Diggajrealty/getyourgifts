@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const partnerSection = document.querySelector('.marquee-section');
+    const partnerMotion = document.querySelector('.partners-motion');
+    partnerMotion?.addEventListener('click', () => {
+        const paused = partnerSection.classList.toggle('is-paused');
+        partnerMotion.setAttribute('aria-pressed', String(paused));
+        partnerMotion.textContent = paused ? 'Resume logo movement ▷' : 'Pause logo movement Ⅱ';
+    });
     // 1. Scroll + hero animations (GSAP, with IntersectionObserver fallback)
     const fadeElements = document.querySelectorAll('.fade-in');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -134,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const categories = card.getAttribute('data-category');
                 
                 if (filterValue === 'all' || (categories && categories.includes(filterValue))) {
-                    card.style.display = 'block';
+                    card.style.display = 'flex';
                     // Re-trigger fade-in animation for visual effect
                     setTimeout(() => {
                         card.style.opacity = '1';
@@ -256,9 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* The Art of Giving owns its animation independently of the Mesa journey. */
+/* Optional Art of Giving scroll sequence; the seasonal B2B panel stays static. */
 (() => {
-    const section = document.querySelector('.gift-story');
+    const section = document.querySelector('.gift-story:not([data-static])');
     if (!section) return;
     const panel = section.querySelector('.gift-story-sticky');
     const chapters = [...section.querySelectorAll('.story-chapter')];

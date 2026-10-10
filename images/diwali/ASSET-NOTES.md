@@ -1,0 +1,9 @@
+# Diwali unboxing assets
+
+`unboxing-atlas.png` was made with the built-in image generation tool, using the existing purple Diwali hamper as its visual reference. It is an illustrative reconstruction for animation; the assembled final hamper uses the original photograph.
+
+Four transparent quadrants: empty box, matching lid, marble/brass diyas, fragrance/potli/treats grouping. The greeting card is native HTML/CSS so text remains crisp and accessible.
+
+## Generation prompt
+
+Use case: product-mockup. Create ONE production sprite atlas for a website scroll-unboxing animation based faithfully on the supplied reference hamper. Transparent background with real alpha. Square 1536x1536 image divided into a precise invisible 2-column by 2-row grid, each cell 768x768. Each object fully contained within its cell with generous 12% empty margin. No grid lines. TOP LEFT: isolated empty open purple and gold patterned rectangular hamper box with natural paper shred filling, same design and three-quarter overhead camera as reference, no contents. TOP RIGHT: matching separate purple lid with delicate gold Indian botanical ornament, same camera and footprint as base, no text. BOTTOM LEFT: two white flower-shaped marble diyas with polished brass bowls, faithfully match reference, grouped closely as one product cutout, no flame. BOTTOM RIGHT: grouped reference lavender fragrance pack, green translucent drawstring potli pouch and orange treats packet, preserve their appearance and package lettering as closely as possible, overlapping elegantly. All four cells equal sized, centered objects, isolated from each other, no shadows outside cells, no backdrop, no invented extra products. Photorealistic premium studio product photography. This atlas will be displayed one cell at a time with CSS; precise equal quadrant placement is essential.

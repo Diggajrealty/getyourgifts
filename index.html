@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mesa-story.css">
+    <link rel="stylesheet" href="diwali-story.css">
+    <link rel="stylesheet" href="diwali-theme.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="festival-brands.css">
 </head>
 <body>
 
@@ -19,14 +21,15 @@
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
-                <a href="#">GYG</a>
+                <a href="#" aria-label="Get Your Gifts home">GYG<span class="logo-caption">Get Your Gifts</span></a>
             </div>
             <nav class="main-nav">
                 <a href="#">Home</a>
-                <a href="#collection">Shop</a>
+                <a href="#collection">Diwali edit</a>
                 <a href="#corporate">Corporate</a>
                 <a href="#wedding">Wedding</a>
-                <a href="#about">About</a>
+                <a href="#about">Our story</a>
+                <a href="#diwali-enquiry" class="nav-enquiry">Plan your gifting ↗</a>
             </nav>
             <div class="header-icons">
                 <a href="https://wa.me/916362631461" target="_blank" aria-label="Contact">
@@ -41,8 +44,8 @@
         <div class="hero-content">
             <p class="hero-eyebrow"><span>The Diwali Edit / 2026</span></p>
             <h1 class="hero-title"><span class="line"><span>A little box.</span></span><span class="line"><span><em>A lot of heart.</em></span></span></h1>
-            <p class="hero-subtitle">Light, warmth, and all the little things that say you care. Thoughtfully curated gifts, made personal.</p>
-            <div class="hero-actions"><a href="#collection" class="btn btn-solid">Explore the collection <span aria-hidden="true">↗</span></a><a href="#mesa-unbox" class="hero-story-link">Discover what’s inside <span aria-hidden="true">↓</span></a></div>
+            <p class="hero-subtitle">Thoughtful Diwali gifting for teams, clients and partners. Beautifully curated, made personal for your business.</p>
+            <div class="hero-actions"><a href="#collection" class="btn btn-solid">Explore the collection <span aria-hidden="true">↗</span></a><a href="#diwali-unbox" class="hero-story-link">Discover what’s inside <span aria-hidden="true">↓</span></a></div>
             <div class="hero-enquiry"><p>Something special in mind? Let’s make it happen.</p><form class="hero-lead-form" name="hero-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully! We will contact you soon.'); this.reset();">
                     <input type="hidden" name="form-name" value="hero-lead">
                     <p hidden><label>Leave blank: <input name="bot-field"></label></p>
@@ -64,82 +67,13 @@
         <a href="#kit-explode" class="hero-scroll" aria-label="Explore the gift story"><span>Scroll to discover</span><span aria-hidden="true">↓</span></a>
     </section>
 
-<section class="mesa-journey" id="mesa-unbox" aria-label="The Mesa welcome story">
- <div class="journey-viewport">
-  <span class="journey-watermark" aria-hidden="true">WELCOME</span>
-  <div class="journey-scene" aria-hidden="true"><figure class="journey-object" data-item="0"><img src="images/kit/lid.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="1"><img src="images/kit/base.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="2"><img src="images/kit/hoodie.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="3"><img src="images/kit/notebook-hq.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="4"><img src="images/kit/tumbler.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="5"><img src="images/kit/pen-hq.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="6"><img src="images/kit/stickers.png" alt="" loading="eager" decoding="async"></figure><figure class="journey-object" data-item="7"><img src="images/kit/card.png" alt="" loading="eager" decoding="async"></figure></div>
-  <div class="diary-scene" aria-hidden="true">
-<img class="diary-right" src="images/kit/notebook-open.png" alt="" width="1536" height="1024" decoding="async">
-<div class="diary-leaf"><div class="diary-leaf-front"><img src="images/kit/notebook-open.png" alt="" width="1536" height="1024"></div><div class="diary-leaf-back"><img src="images/kit/notebook-hq.png" alt=""></div></div>
-<svg class="diary-ink" viewBox="0 0 1000 667" fill="none" aria-hidden="true">
-<path d="M560 230 Q590 225 620 230 M590 229 Q581 249 577 272 M609 271 Q615 243 621 225 M614 254 Q635 237 630 256 L625 270 Q631 275 638 264 M642 248 L637 267 Q638 277 650 266 M645 237 L646 235 M652 248 L646 271 Q662 239 671 249 Q675 252 669 266 Q668 277 681 265 M682 270 L695 227 M689 253 Q711 234 712 247 Q714 257 688 259 Q707 254 707 268 Q710 275 721 264 M731 269 Q737 240 745 226 M738 252 Q763 235 757 254 Q749 274 737 268 Q742 277 767 264 M773 248 L768 267 Q771 276 782 266 M776 236 L777 234 M807 249 Q786 239 785 260 Q784 273 797 264 L808 246 Q801 282 791 290 Q772 301 780 283 Q787 277 814 271 M823 268 L824 267"/>
-<path d="M591 335 Q575 319 561 334 Q548 347 579 352 Q598 359 577 372 Q562 380 551 369 M610 326 Q596 355 598 367 Q600 378 613 363 M590 343 L620 340 M638 347 Q620 337 617 355 Q612 374 627 366 L638 345 L632 367 Q635 376 647 363 M651 345 L645 368 Q659 335 668 345 Q672 349 668 353 M681 327 Q667 355 670 369 Q675 376 687 362 M661 343 L690 341 M709 370 L722 325 M715 349 Q737 333 730 354 L725 367 Q729 376 741 363 M743 355 Q766 355 759 343 Q750 335 741 356 Q737 376 761 366 M773 345 L765 370 Q782 335 790 345 Q793 350 789 353 M793 356 Q817 355 810 343 Q799 334 791 356 Q787 375 813 366 M824 369 L825 368"/>
-<path d="M554 395 Q668 383 828 391"/>
-</svg><div class="diary-imprint"><span>MESA</span><small>YOUR NEXT CHAPTER STARTS HERE.</small></div>
-<img class="diary-pen" src="images/kit/pen-hq.png" alt="" decoding="async">
-</div>
-  <div class="journey-line"></div>
- <div class="journey-controls"><a class="journey-skip" href="#collection">Skip to the collection &#8595;</a><div class="journey-rail"><span class="journey-scroll-note">SCROLL TO UNWRAP THE STORY</span><nav class="journey-nav" aria-label="Gift story chapters"><a href="#mesa-chapter-0" aria-label="Before the beginning" aria-current="step"></a><a href="#mesa-chapter-1" aria-label="The opening"></a><a href="#mesa-chapter-2" aria-label="01 / Belonging"></a><a href="#mesa-chapter-3" aria-label="02 / Possibility"></a><a href="#mesa-chapter-4" aria-label="03 / Everyday rituals"></a><a href="#mesa-chapter-5" aria-label="04 / Making a mark"></a><a href="#mesa-chapter-6" aria-label="05 / Personality"></a><a href="#mesa-chapter-7" aria-label="06 / The human touch"></a><a href="#mesa-chapter-8" aria-label="The complete welcome"></a></nav><span class="journey-counter" aria-hidden="true">01 / 09</span></div></div>
- </div>
- <div class="journey-chapters"><article class="journey-chapter" id="mesa-chapter-0"><div class="journey-copy"><p class="journey-kicker">Before the beginning</p><h2>A box full of<br><em>possibilities.</em></h2><p>Every great welcome starts with a little anticipation.</p><span class="journey-detail">Scroll to open. Keep going to discover.</span></div><img class="journey-inline" src="images/kit/lid.png" alt="Mesa green box lid" loading="lazy"></article>
-<article class="journey-chapter" id="mesa-chapter-1"><div class="journey-copy"><p class="journey-kicker">The opening</p><h2>Something special.<br><em>Just for you.</em></h2><p>The lid lifts. The everyday becomes extraordinary. A whole world of thoughtful details comes into view.</p><span class="journey-detail">One welcome. Many thoughtful moments.</span></div><img class="journey-inline" src="images/kit/base.png" alt="Green gift box with fitted insert" loading="lazy"></article>
-<article class="journey-chapter" id="mesa-chapter-2"><div class="journey-copy"><p class="journey-kicker">01 / Belonging</p><h2>Not just a hoodie.<br><em>A sense of belonging.</em></h2><p>Something to wear on day one. Something that says you are already part of the team.</p><span class="journey-detail">Embroidered identity / Everyday comfort</span></div><img class="journey-inline" src="images/kit/hoodie.png" alt="Black embroidered Mesa hoodie" loading="lazy"></article>
-<article class="journey-chapter journey-chapter-diary" id="mesa-chapter-3"><div class="journey-copy"><p class="journey-kicker">02 / Possibility</p><h2>For the ideas<br><em>still unwritten.</em></h2><p>A fresh page. Your first big idea. A small reminder from Mesa: think big, and start here.</p><span class="journey-detail">Scroll to open / Stay for the first words</span></div><figure class="diary-static" role="img" aria-label="Open Mesa notebook with the handwritten note: Think big. Start here."><img src="images/kit/notebook-open.png" alt="" width="1536" height="1024" loading="lazy"><svg class="diary-ink" viewBox="0 0 1000 667" fill="none" aria-hidden="true">
-<path d="M560 230 Q590 225 620 230 M590 229 Q581 249 577 272 M609 271 Q615 243 621 225 M614 254 Q635 237 630 256 L625 270 Q631 275 638 264 M642 248 L637 267 Q638 277 650 266 M645 237 L646 235 M652 248 L646 271 Q662 239 671 249 Q675 252 669 266 Q668 277 681 265 M682 270 L695 227 M689 253 Q711 234 712 247 Q714 257 688 259 Q707 254 707 268 Q710 275 721 264 M731 269 Q737 240 745 226 M738 252 Q763 235 757 254 Q749 274 737 268 Q742 277 767 264 M773 248 L768 267 Q771 276 782 266 M776 236 L777 234 M807 249 Q786 239 785 260 Q784 273 797 264 L808 246 Q801 282 791 290 Q772 301 780 283 Q787 277 814 271 M823 268 L824 267"/>
-<path d="M591 335 Q575 319 561 334 Q548 347 579 352 Q598 359 577 372 Q562 380 551 369 M610 326 Q596 355 598 367 Q600 378 613 363 M590 343 L620 340 M638 347 Q620 337 617 355 Q612 374 627 366 L638 345 L632 367 Q635 376 647 363 M651 345 L645 368 Q659 335 668 345 Q672 349 668 353 M681 327 Q667 355 670 369 Q675 376 687 362 M661 343 L690 341 M709 370 L722 325 M715 349 Q737 333 730 354 L725 367 Q729 376 741 363 M743 355 Q766 355 759 343 Q750 335 741 356 Q737 376 761 366 M773 345 L765 370 Q782 335 790 345 Q793 350 789 353 M793 356 Q817 355 810 343 Q799 334 791 356 Q787 375 813 366 M824 369 L825 368"/>
-<path d="M554 395 Q668 383 828 391"/>
-</svg><div class="diary-imprint"><span>MESA</span><small>YOUR NEXT CHAPTER STARTS HERE.</small></div></figure></article>
-<article class="journey-chapter" id="mesa-chapter-4"><div class="journey-copy"><p class="journey-kicker">03 / Everyday rituals</p><h2>Good mornings.<br><em>Great beginnings.</em></h2><p>A companion for the desk, the commute, and the conversations that happen in between.</p><span class="journey-detail">Your everyday tumbler / Made personal</span></div><img class="journey-inline" src="images/kit/tumbler.png" alt="White Mesa tumbler" loading="lazy"></article>
-<article class="journey-chapter" id="mesa-chapter-5"><div class="journey-copy"><p class="journey-kicker">04 / Making a mark</p><h2>Small detail.<br><em>Lasting impression.</em></h2><p>Because even the simplest object can carry a little of your story.</p><span class="journey-detail">A personal signature / The branded pen</span></div><img class="journey-inline" src="images/kit/pen-hq.png" alt="Mesa branded pen" loading="lazy"></article>
-<article class="journey-chapter" id="mesa-chapter-6"><div class="journey-copy"><p class="journey-kicker">05 / Personality</p><h2>A little playful.<br><em>A lot like you.</em></h2><p>On a laptop or a notebook, small expressions make a new space feel like their own.</p><span class="journey-detail">The sticker edit / Made to belong</span></div><img class="journey-inline" src="images/kit/stickers.png" alt="Mesa sticker sheet" loading="lazy"></article>
-<article class="journey-chapter" id="mesa-chapter-7"><div class="journey-copy"><p class="journey-kicker">06 / The human touch</p><h2>The best part?<br><em>The thought behind it.</em></h2><p>A few words can turn a collection of gifts into a genuinely personal welcome.</p><span class="journey-detail">A welcome card / Words that stay</span></div><img class="journey-inline" src="images/kit/card.png" alt="Personal Mesa welcome card" loading="lazy"></article>
-<article class="journey-chapter" id="mesa-chapter-8"><div class="journey-copy"><p class="journey-kicker">The complete welcome</p><h2>Many little details.<br><em>One unforgettable welcome.</em></h2><p>Bring your brand, your people, and your story. We will bring it all together.</p><a class="journey-link" href="https://wa.me/916362631461?text=Hi%2C%20I%27d%20like%20a%20custom%20welcome%20kit." target="_blank" rel="noopener">Create your welcome <span aria-hidden="true">&#8599;</span></a></div><img class="journey-inline" src="images/kit/base.png" alt="Green gift box with fitted insert" loading="lazy"></article></div>
-
-</section>
-
-    <!-- Trust Banner -->
-    <div class="trust-banner">
-        <div class="container trust-container">
-            <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-                <span>PAN India Shipping</span>
-            </div>
-            <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <span>Same Day Delivery (Blr)</span>
-            </div>
-            <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                <span>Premium Packaging</span>
-            </div>
-            <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>10,000+ Happy Clients</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scroll story: real product photography with a transparent cutout -->
-    <section class="gift-story" id="kit-explode" aria-labelledby="gift-story-title">
-      <div class="gift-story-sticky">
-        <div class="story-topline"><span>THE ART OF GIVING</span><span>THREE LITTLE REASONS TO SMILE</span></div>
-        <div class="story-layout">
-          <div class="story-intro"><p class="section-eyebrow">More than a gift</p><h2 id="gift-story-title">The joy is<br>in the <em>details.</em></h2><p>A little light. A familiar fragrance. A thought that stays with them.</p><a href="#collection" class="story-cta">Find their perfect gift <span aria-hidden="true">↗</span></a></div>
-          <div class="story-stage"><div class="story-halo" aria-hidden="true"></div><span class="story-watermark" aria-hidden="true">joy</span><img class="story-product" src="images/collection/diwali-cutout.png" alt="Inside the festive hamper: flower-shaped diyas, lavender fragrance, treats and a Diwali greeting" width="1254" height="1254" loading="lazy"><span class="story-product-note">Small things. Beautifully brought together.</span></div>
-          <div class="story-chapters">
-            <article class="story-chapter is-active"><span class="chapter-number">01 / A LITTLE LIGHT</span><h3>Let it glow.</h3><p>Flower-shaped diyas bring a little festive warmth to their favourite corner.</p></article>
-            <article class="story-chapter"><span class="chapter-number">02 / A MOMENT OF CALM</span><h3>Make room for joy.</h3><p>Lavender fragrance and thoughtful treats turn a small pause into a lovely ritual.</p></article>
-            <article class="story-chapter"><span class="chapter-number">03 / A PERSONAL TOUCH</span><h3>Say it your way.</h3><p>A festive greeting, a beautiful presentation, and the feeling that this was chosen just for them.</p></article>
-          </div>
-        </div>
-        <div class="story-footer"><span class="story-scroll-label">SCROLL TO SAVOUR THE DETAILS ↓</span><div class="story-progress" aria-hidden="true"><span></span></div><span class="story-count" aria-hidden="true">01 — 03</span></div>
-      </div>
-    </section>
-
     <!-- Trusted By Marquee -->
-    <section class="marquee-section fade-in">
-        <p class="marquee-title">Trusted By Leading Brands</p>
-        <div class="marquee-container" id="marquee-row-1">
+    <section class="marquee-section fade-in" aria-labelledby="partners-title">
+        <div class="container partners-heading">
+            <div><p class="section-eyebrow">Good company. Thoughtful gifting.</p><h2 id="partners-title">Their people.<br><em>Our privilege.</em></h2></div>
+            <div class="partners-intro"><p>Trusted by brands to turn a thank-you into something their people remember.</p><button class="partners-motion" type="button" aria-pressed="false">Pause logo movement <span aria-hidden="true">Ⅱ</span></button></div>
+        </div>
+        <div class="marquee-container" id="marquee-row-1" tabindex="0" aria-label="Trusted brands, first row">
             <div class="marquee-track">
                 <img src="images/brands/anil.webp" alt="Anil Engineering">
                 <img src="images/brands/assetz.webp" alt="Assetz">
@@ -165,7 +99,7 @@
             </div>
         </div>
         
-        <div class="marquee-container" id="marquee-row-2">
+        <div class="marquee-container" id="marquee-row-2" tabindex="0" aria-label="Trusted brands, second row">
             <div class="marquee-track reverse">
                 <img src="images/brands/tara.webp" alt="Tara Electricals">
                 <img src="images/brands/sightsee.webp" alt="Sightsee Holidays">
@@ -189,7 +123,7 @@
             </div>
         </div>
 
-        <div class="marquee-container" id="marquee-row-3">
+        <div class="marquee-container" id="marquee-row-3" tabindex="0" aria-label="Trusted brands, third row">
             <div class="marquee-track">
                 <img src="images/brands/adeez.webp" alt="Adeez">
                 <img src="images/brands/buhler.webp" alt="Bühler">
@@ -252,12 +186,119 @@
         </div>
     </section>
 
+    <!-- Festival of Brands: independent design preview -->
+    <section class="festival-brands" id="festival-brands" aria-labelledby="fb-title">
+      <p class="fb-preview-label">New design preview</p>
+      <header class="fb-heading"><div class="fb-eyebrow" aria-hidden="true"></div><h2 id="fb-title">Trusted by leading brands</h2><p class="fb-subtitle">Corporate gifting for their teams, clients and partners.</p></header>
+      <div class="fb-ribbons"><div class="fb-row" tabindex="0" role="group" aria-label="Brand ribbon 1. Focus to pause; scroll horizontally when reduced motion is enabled."><div class="fb-belt" style="--fb-duration:117s"><ul class="fb-group" aria-label="Trusted brands"><li class="fb-tile"><img src="images/brands/anil.webp" alt="Anil Engineering" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/karle.webp" alt="Karle Group" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/nambiar.webp" alt="Nambiar Builders" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/tara.webp" alt="Tara Electricals" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/workshaala.webp" alt="Workshaala" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/blissclub.webp" alt="blissclub" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/buhler.webp" alt="Bühler" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mailmodo.webp" alt="Mailmodo" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/people-equation.webp" alt="People Equation" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/the-grove.webp" alt="The Grove Restaurant" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/reknew.webp" alt="re:knew" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/cywarden.webp" alt="Cywarden" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/datacouch.webp" alt="DataCouch" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/metaforms.webp" alt="Metaforms" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/akunka.webp" alt="Akunka" width="172" height="87" loading="lazy" decoding="async"></li></ul><ul class="fb-group" aria-hidden="true"><li class="fb-tile"><img src="images/brands/anil.webp" alt="Anil Engineering" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/karle.webp" alt="Karle Group" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/nambiar.webp" alt="Nambiar Builders" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/tara.webp" alt="Tara Electricals" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/workshaala.webp" alt="Workshaala" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/blissclub.webp" alt="blissclub" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/buhler.webp" alt="Bühler" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mailmodo.webp" alt="Mailmodo" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/people-equation.webp" alt="People Equation" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/the-grove.webp" alt="The Grove Restaurant" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/reknew.webp" alt="re:knew" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/cywarden.webp" alt="Cywarden" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/datacouch.webp" alt="DataCouch" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/metaforms.webp" alt="Metaforms" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/akunka.webp" alt="Akunka" width="172" height="87" loading="lazy" decoding="async"></li></ul></div></div>
+<div class="fb-row" tabindex="0" role="group" aria-label="Brand ribbon 2. Focus to pause; scroll horizontally when reduced motion is enabled."><div class="fb-belt" style="--fb-duration:117s"><ul class="fb-group" aria-label="Trusted brands"><li class="fb-tile"><img src="images/brands/assetz.webp" alt="Assetz" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mittal.webp" alt="Mittal's" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/neeta.webp" alt="Neeta Logistics" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/sightsee.webp" alt="Sightsee Holidays" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/upliance.webp" alt="upliance.ai" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/karan.webp" alt="Karan Kothari Jewellers" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/teva.webp" alt="Teva" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mitindia.webp" alt="MIT India" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/starcomet.webp" alt="Star Comet" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mesa.webp" alt="Mesa School of Business" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/srigdha.webp" alt="Srigdha" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/ibm-cloud.webp" alt="IBM Cloud" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/kids-runway.webp" alt="Kids Runway" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/crew.webp" alt="Crew" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/spacegenics.webp" alt="Spacegenics" width="172" height="87" loading="lazy" decoding="async"></li></ul><ul class="fb-group" aria-hidden="true"><li class="fb-tile"><img src="images/brands/assetz.webp" alt="Assetz" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mittal.webp" alt="Mittal's" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/neeta.webp" alt="Neeta Logistics" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/sightsee.webp" alt="Sightsee Holidays" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/upliance.webp" alt="upliance.ai" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/karan.webp" alt="Karan Kothari Jewellers" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/teva.webp" alt="Teva" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mitindia.webp" alt="MIT India" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/starcomet.webp" alt="Star Comet" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mesa.webp" alt="Mesa School of Business" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/srigdha.webp" alt="Srigdha" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/ibm-cloud.webp" alt="IBM Cloud" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/kids-runway.webp" alt="Kids Runway" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/crew.webp" alt="Crew" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/spacegenics.webp" alt="Spacegenics" width="172" height="87" loading="lazy" decoding="async"></li></ul></div></div>
+<div class="fb-row" tabindex="0" role="group" aria-label="Brand ribbon 3. Focus to pause; scroll horizontally when reduced motion is enabled."><div class="fb-belt" style="--fb-duration:109.2s"><ul class="fb-group" aria-label="Trusted brands"><li class="fb-tile"><img src="images/brands/equitas.webp" alt="Equitas" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/label.webp" alt="The Label" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/neokred.webp" alt="Neokred" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/melzer.webp" alt="Melzer Chemicals" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/factsuite.jpg" alt="FactSuite" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/adeez.webp" alt="Adeez" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/cognito.webp" alt="Cognito" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mycaptain.webp" alt="MyCaptain" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/tlt-plus.webp" alt="TLT Plus" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/sivaltech.webp" alt="Sivaltech" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/stackpro.webp" alt="Stackpro" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/isopure.webp" alt="Isopure" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/bvcits.webp" alt="BVCITS" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/satori-craft.webp" alt="Satori Craft" width="172" height="87" loading="lazy" decoding="async"></li></ul><ul class="fb-group" aria-hidden="true"><li class="fb-tile"><img src="images/brands/equitas.webp" alt="Equitas" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/label.webp" alt="The Label" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/neokred.webp" alt="Neokred" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/melzer.webp" alt="Melzer Chemicals" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/factsuite.jpg" alt="FactSuite" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/adeez.webp" alt="Adeez" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/cognito.webp" alt="Cognito" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/mycaptain.webp" alt="MyCaptain" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/tlt-plus.webp" alt="TLT Plus" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/sivaltech.webp" alt="Sivaltech" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/stackpro.webp" alt="Stackpro" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/isopure.webp" alt="Isopure" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/bvcits.webp" alt="BVCITS" width="172" height="87" loading="lazy" decoding="async"></li><li class="fb-tile"><img src="images/brands/satori-craft.webp" alt="Satori Craft" width="172" height="87" loading="lazy" decoding="async"></li></ul></div></div></div>
+      <div class="fb-bottom"><p class="fb-note">All 44 brands included across three moving rows.</p><button class="fb-toggle" type="button" aria-pressed="false" hidden>Pause animation</button></div>
+    </section>
+
+<section class="diwali-journey" id="diwali-unbox" aria-label="Unwrap a Diwali hamper">
+ <div class="diwali-stage">
+  <div class="diwali-rangoli" aria-hidden="true"></div><span class="diwali-watermark" aria-hidden="true">Diwali</span>
+  <div aria-hidden="true"><figure class="diwali-object" data-item="0"><span class="diwali-sprite sprite-base"></span></figure><figure class="diwali-object" data-item="1"><span class="diwali-sprite sprite-lid"></span></figure><figure class="diwali-object" data-item="2"><span class="diwali-sprite sprite-diyas"></span><i class="diwali-flame"></i><i class="diwali-flame second"></i></figure><figure class="diwali-object" data-item="3"><span class="diwali-sprite sprite-joy"></span></figure><figure class="diwali-object" data-item="4"><div class="diwali-card"><small>A little note. A lot of heart.</small><strong>Wishing you<br>a brighter Diwali.</strong><p>For all that you do.<br>And all that we share.</p><span class="card-signature">With warmth, from your team</span></div></figure><figure class="diwali-object" data-item="5"><img src="images/collection/diwali-cutout-hero.png" alt="" width="900" height="900" decoding="async"></figure></div>
+  <a class="diwali-skip" href="#collection">Explore the collection ↘</a>
+  <div class="diwali-rail"><span class="diwali-scroll-note">SCROLL TO UNWRAP A LITTLE DIWALI</span><nav class="diwali-nav" aria-label="Diwali unboxing chapters"><a href="#diwali-chapter-0" aria-label="The Diwali unboxing" aria-current="step"></a><a href="#diwali-chapter-1" aria-label="01 / The reveal"></a><a href="#diwali-chapter-2" aria-label="02 / A little light"></a><a href="#diwali-chapter-3" aria-label="03 / Little joys"></a><a href="#diwali-chapter-4" aria-label="04 / Made personal"></a><a href="#diwali-chapter-5" aria-label="The complete gesture"></a></nav><span class="diwali-counter" aria-hidden="true">01 / 06</span></div><div class="diwali-progress"></div>
+ </div>
+ <div class="diwali-chapters"><article class="diwali-chapter" id="diwali-chapter-0"><div class="diwali-copy"><p class="diwali-kicker">The Diwali unboxing</p><h2>A little box.<br><em>A brighter Diwali.</em></h2><p>A thoughtful thank-you for the people who make your business brighter.</p><span class="diwali-detail">Scroll to lift the lid / Discover the little details</span></div><div class="diwali-inline diwali-sprite sprite-lid" role="img" aria-label="Purple and gold festive hamper lid"></div></article>
+<article class="diwali-chapter" id="diwali-chapter-1"><div class="diwali-copy"><p class="diwali-kicker">01 / The reveal</p><h2>Open a box.<br><em>Feel the celebration.</em></h2><p>Rich plum. A glimmer of gold. And a collection of little joys, waiting to be discovered.</p><span class="diwali-detail">Thoughtfully curated / Beautifully presented</span></div><div class="diwali-inline diwali-sprite sprite-base" role="img" aria-label="Open purple hamper with paper filling"></div></article>
+<article class="diwali-chapter" id="diwali-chapter-2"><div class="diwali-copy"><p class="diwali-kicker">02 / A little light</p><h2>Let the warmth<br><em>find its way.</em></h2><p>Flower-shaped diyas. A golden glow. A little light for the homes of the people you value.</p><span class="diwali-detail">Festive details / Moments to remember</span></div><div class="diwali-inline diwali-sprite sprite-diyas" role="img" aria-label="Two flower-shaped white diyas with brass bowls"></div></article>
+<article class="diwali-chapter" id="diwali-chapter-3"><div class="diwali-copy"><p class="diwali-kicker">03 / Little joys</p><h2>Sweet moments.<br><em>Lasting memories.</em></h2><p>Fragrant accents, festive treats and a beautifully wrapped potli. Small pleasures that make a thank-you feel special.</p><span class="diwali-detail">Fragrance, treats & festive touches</span></div><div class="diwali-inline diwali-sprite sprite-joy" role="img" aria-label="Lavender fragrance, green potli pouch and festive treats"></div></article>
+<article class="diwali-chapter" id="diwali-chapter-4"><div class="diwali-copy"><p class="diwali-kicker">04 / Made personal</p><h2>Your words.<br><em>Their Diwali.</em></h2><p>Make the gesture your own with a personal greeting and thoughtful branding for your team, clients or partners.</p><span class="diwali-detail">Your brand / Your message / Thoughtfully given</span></div><div class="diwali-inline"><div class="diwali-card"><small>A little note. A lot of heart.</small><strong>Wishing you<br>a brighter Diwali.</strong><p>For all that you do.<br>And all that we share.</p><span class="card-signature">With warmth, from your team</span></div></div></article>
+<article class="diwali-chapter" id="diwali-chapter-5"><div class="diwali-copy"><p class="diwali-kicker">The complete gesture</p><h2>Many little joys.<br><em>One meaningful gift.</em></h2><p>Bring us your gifting list, your budget and your ideas. Let’s create a Diwali they’ll remember.</p><a class="diwali-link" href="#diwali-enquiry">Plan your Diwali gifting <span aria-hidden="true">↗</span></a></div><img class="diwali-inline" src="images/collection/diwali-cutout-hero.png" alt="Complete purple Diwali hamper" width="900" height="900" loading="lazy"></article></div>
+</section>
+
+    <div class="festival-ribbon"><span>A little light</span><i aria-hidden="true">✧</i><span>A lot of gratitude</span><i aria-hidden="true">✧</i><span>A Diwali to remember</span></div>
+    <!-- Trust Banner -->
+    <div class="trust-banner">
+        <div class="container trust-container">
+            <div class="trust-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
+                <span>PAN India Shipping</span>
+            </div>
+            <div class="trust-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Same Day Delivery (Blr)</span>
+            </div>
+            <div class="trust-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                <span>Premium Packaging</span>
+            </div>
+            <div class="trust-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>10,000+ Happy Clients</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection section">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-eyebrow">The Diwali Edit / 2026</p>
+                <h2 class="section-title">Find their kind of <em>festive.</em></h2>
+                <p class="section-lede">Rich colours, little luxuries and thoughtful treats. Discover a hamper for every kind of thank-you.</p>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="category-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All Hampers</button>
+                <button class="filter-btn" data-filter="corporate">Corporate Focus</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="luxe">Lifestyle &amp; Wellness</button>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="traditional"><div class="img-wrapper"><img src="images/collection/artisanal-edit.jpg" alt="Plum gift box with treats and decorative festive keepsakes" loading="lazy" width="900" height="1200"><span class="product-number">01 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">The Artisanal Edit</h3><p class="product-desc">A celebration in plum and gold, with festive treats and little keepsakes beautifully nestled together.</p><p class="product-includes">Rich colour. Thoughtful details. A festive first impression.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20The%20Artisanal%20Edit.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="corporate"><div class="img-wrapper"><img src="images/collection/corporate-elegance.jpg" alt="Purple Tara Electricals branded corporate gift box" loading="lazy" width="900" height="1200"><span class="product-number">02 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">Corporate Elegance</h3><p class="product-desc">A branded presentation box that makes your thank-you feel personal, from the first look to the final detail.</p><p class="product-includes">Your brand, beautifully presented.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20Corporate%20Elegance.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="luxe"><div class="img-wrapper"><img src="images/collection/wellness-light.jpg" alt="Gift box with candle jars and fragrance bottles" loading="lazy" width="900" height="1200"><span class="product-number">03 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">Wellness & Light</h3><p class="product-desc">A softer way to celebrate, with candle jars and fragrant accents arranged in an elegant gift box.</p><p class="product-includes">A little pause. A little everyday indulgence.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20Wellness%20%26%20Light.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="traditional"><div class="img-wrapper"><img src="images/collection/golden-sweets.jpg" alt="Ivory hamper with decorative jars, a red box and orange sweets" loading="lazy" width="900" height="1200"><span class="product-number">04 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">The Golden Sweets Box</h3><p class="product-desc">Warm festive colours, decorative jars and sweet little touches for the people who make celebrations special.</p><p class="product-includes">Traditional warmth, thoughtfully arranged.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20The%20Golden%20Sweets%20Box.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="corporate luxe"><div class="img-wrapper"><img src="images/collection/executive-edit.jpg" alt="Purple corporate hamper with a mug, jars and packaged gifts" loading="lazy" width="900" height="1200"><span class="product-number">05 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">The Executive Edit</h3><p class="product-desc">Everyday favourites meet festive details in a generous box designed to leave a lasting impression.</p><p class="product-includes">A considered gesture for clients and teams.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20The%20Executive%20Edit.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="luxe traditional"><div class="img-wrapper"><img src="images/collection/botanical-joy.jpg" alt="Botanical hamper with green foliage, cork accessories and boxed gifts" loading="lazy" width="900" height="1200"><span class="product-number">06 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">Botanical Joy</h3><p class="product-desc">Natural textures, fresh green accents and warm earthy tones come together in this beautifully layered hamper.</p><p class="product-includes">An earthy palette. A warm-hearted gesture.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20Botanical%20Joy.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
+            </div>
+        </div>
+    <p class="collection-footnote">Have a colour, budget or brand in mind? <a href="#diwali-enquiry">Let’s create your company’s Diwali gifts.</a></p>
+    </section>
+
+    <!-- Scroll story: real product photography with a transparent cutout -->
+    <section class="gift-story" data-static="true" id="kit-explode" aria-labelledby="gift-story-title">
+      <div class="gift-story-sticky">
+        <div class="story-topline"><span>YOUR DIWALI, THOUGHTFULLY HANDLED</span><span>FROM YOUR BRAND, WITH WARMTH</span></div>
+        <div class="story-layout">
+          <div class="story-intro"><p class="section-eyebrow">Made for your people</p><h2 id="gift-story-title">Big gestures.<br><em>Personal details.</em></h2><p>For the team behind every milestone. The clients who believe in you. The partners who make it happen.</p><a href="#collection" class="story-cta">Explore the Diwali edit <span aria-hidden="true">↗</span></a></div>
+          <div class="story-stage"><div class="story-halo" aria-hidden="true"></div><span class="story-watermark" aria-hidden="true">joy</span><img class="story-product" src="images/collection/diwali-cutout.png" alt="Inside the festive hamper: flower-shaped diyas, lavender fragrance, treats and a Diwali greeting" width="1254" height="1254" loading="lazy"><span class="story-product-note">Small things. Beautifully brought together.</span></div>
+          <div class="story-chapters">
+            <article class="story-chapter is-active"><span class="chapter-number">01 / YOUR PEOPLE</span><h3>A meaningful thank-you.</h3><p>Choose a festive gesture for employees, clients and partners, with a collection that suits your people.</p></article>
+            <article class="story-chapter"><span class="chapter-number">02 / YOUR BRAND</span><h3>Make it feel like you.</h3><p>Personal notes, branded sleeves and considered packaging bring your company’s personality to every gift.</p></article>
+            <article class="story-chapter"><span class="chapter-number">03 / ALL TOGETHER</span><h3>From idea to doorstep.</h3><p>Share your quantities, budget and delivery needs. We’ll help bring the right details together.</p></article>
+          </div>
+        </div>
+        <div class="story-footer"><span class="story-scroll-label">SCROLL TO SAVOUR THE DETAILS ↓</span><div class="story-progress" aria-hidden="true"><span></span></div><span class="story-count" aria-hidden="true">01 — 03</span></div>
+      </div>
+    </section>
+
+
+
     <!-- Quick Inquiry Form -->
     <section class="quick-inquiry section fade-in">
         <div class="container inquiry-split">
             <div class="inquiry-intro">
-                <p class="section-eyebrow">Talk To Us</p>
-                <h2 class="inquiry-title">Tell us what you need</h2>
+                <p class="section-eyebrow">Let’s make it personal</p>
+                <h2 class="inquiry-title">Your Diwali.<br>Our thoughtful details.</h2>
                 <p class="inquiry-sub">Every hamper we ship starts as a conversation. Send a note and a real person &mdash; usually Dharti &mdash; replies within two working hours.</p>
                 <ul class="inquiry-contacts">
                     <li>
@@ -294,7 +335,7 @@
                     </div>
                     <div class="input-field">
                         <label>Message / Requirements</label>
-                        <textarea name="message" rows="4" required placeholder="Tell us about your gifting needs..."></textarea>
+                        <textarea name="message" rows="4" required placeholder="Your company, hamper quantity, budget and delivery date..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary submit-btn">Send Inquiry</button>
                 </form>
@@ -346,8 +387,8 @@
     <section class="services section fade-in bg-pearl">
         <div class="container">
             <div class="section-head">
-                <p class="section-eyebrow">What We Do</p>
-                <h2 class="section-title">Gifting, <em>handled end to end</em></h2>
+                <p class="section-eyebrow">Festive moments &amp; beyond</p>
+                <h2 class="section-title">Every occasion.<br><em>The same thoughtfulness.</em></h2>
             </div>
             <div class="services-grid">
                 <div class="service-card" id="corporate">
@@ -369,47 +410,10 @@
         </div>
     </section>
 
-    <!-- Collection Section -->
-    <section id="collection" class="collection section">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-eyebrow">Handpicked</p>
-                <h2 class="section-title">The Festive Collection</h2>
-                <p class="section-lede">A few of our favourite creations. Choose a mood, then make it yours.</p>
-            </div>
-            
-            <!-- Category Pills -->
-            <div class="category-filters fade-in">
-                <button class="filter-btn active" data-filter="all">All Hampers</button>
-                <button class="filter-btn" data-filter="corporate">Corporate Focus</button>
-                <button class="filter-btn" data-filter="traditional">Traditional</button>
-                <button class="filter-btn" data-filter="luxe">Lifestyle &amp; Wellness</button>
-            </div>
-            
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card" data-category="traditional"><div class="img-wrapper"><img src="images/collection/artisanal-edit.jpg" alt="Plum gift box with treats and decorative festive keepsakes" loading="lazy" width="900" height="1200"><span class="product-number">01 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">The Artisanal Edit</h3><p class="product-desc">A celebration in plum and gold, with festive treats and little keepsakes beautifully nestled together.</p><p class="product-includes">Rich colour. Thoughtful details. A festive first impression.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20The%20Artisanal%20Edit.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
 
-                <!-- Product 2 -->
-                <div class="product-card" data-category="corporate"><div class="img-wrapper"><img src="images/collection/corporate-elegance.jpg" alt="Purple Tara Electricals branded corporate gift box" loading="lazy" width="900" height="1200"><span class="product-number">02 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">Corporate Elegance</h3><p class="product-desc">A branded presentation box that makes your thank-you feel personal, from the first look to the final detail.</p><p class="product-includes">Your brand, beautifully presented.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20Corporate%20Elegance.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
-
-                <!-- Product 3 -->
-                <div class="product-card" data-category="luxe"><div class="img-wrapper"><img src="images/collection/wellness-light.jpg" alt="Gift box with candle jars and fragrance bottles" loading="lazy" width="900" height="1200"><span class="product-number">03 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">Wellness & Light</h3><p class="product-desc">A softer way to celebrate, with candle jars and fragrant accents arranged in an elegant gift box.</p><p class="product-includes">A little pause. A little everyday indulgence.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20Wellness%20%26%20Light.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-category="traditional"><div class="img-wrapper"><img src="images/collection/golden-sweets.jpg" alt="Ivory hamper with decorative jars, a red box and orange sweets" loading="lazy" width="900" height="1200"><span class="product-number">04 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">The Golden Sweets Box</h3><p class="product-desc">Warm festive colours, decorative jars and sweet little touches for the people who make celebrations special.</p><p class="product-includes">Traditional warmth, thoughtfully arranged.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20The%20Golden%20Sweets%20Box.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
-
-                <!-- Product 5 -->
-                <div class="product-card" data-category="corporate luxe"><div class="img-wrapper"><img src="images/collection/executive-edit.jpg" alt="Purple corporate hamper with a mug, jars and packaged gifts" loading="lazy" width="900" height="1200"><span class="product-number">05 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">The Executive Edit</h3><p class="product-desc">Everyday favourites meet festive details in a generous box designed to leave a lasting impression.</p><p class="product-includes">A considered gesture for clients and teams.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20The%20Executive%20Edit.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
-
-                <!-- Product 6 -->
-                <div class="product-card" data-category="luxe traditional"><div class="img-wrapper"><img src="images/collection/botanical-joy.jpg" alt="Botanical hamper with green foliage, cork accessories and boxed gifts" loading="lazy" width="900" height="1200"><span class="product-number">06 / THE DIWALI EDIT</span></div><div class="product-info"><h3 class="product-title">Botanical Joy</h3><p class="product-desc">Natural textures, fresh green accents and warm earthy tones come together in this beautifully layered hamper.</p><p class="product-includes">An earthy palette. A warm-hearted gesture.</p><a href="https://wa.me/916362631461?text=Hi%2C%20I%E2%80%99m%20interested%20in%20Botanical%20Joy.%20Please%20share%20the%20available%20contents%20and%20pricing." class="btn btn-outline whatsapp-link" target="_blank" rel="noopener">Make it yours <span aria-hidden="true">↗</span></a></div></div>
-            </div>
-        </div>
-    </section>
 
     <!-- Why Choose Us -->
-    <section class="features section fade-in" id="after-mesa">
+    <section class="features section fade-in" id="gifting-difference">
         <div class="container">
             <div class="section-head">
                 <p class="section-eyebrow">The Difference</p>
@@ -569,12 +573,14 @@
         </div>
     </section>
 
+<section class="festive-process" aria-labelledby="process-title"><div class="container"><div class="section-head"><p class="section-eyebrow">A little planning. A lot of joy.</p><h2 class="section-title" id="process-title">Your list. Our care.<br>A brighter Diwali.</h2></div><div class="process-grid"><article class="process-step"><span>01 / TELL US</span><h3>Start with your people.</h3><p>Share your headcount, budget and delivery plans. We’ll help you choose a thoughtful direction.</p></article><article class="process-step"><span>02 / MAKE IT YOURS</span><h3>Add your kind of warmth.</h3><p>Choose the hamper, discuss your branding and add a personal message to complete the gesture.</p></article><article class="process-step"><span>03 / LET IT TRAVEL</span><h3>Send a little celebration.</h3><p>Once the details are agreed, we bring the gifts together and coordinate delivery with you.</p></article></div></div></section>
+
     <!-- Gifting Concierge Form -->
-    <section class="concierge section fade-in">
+    <section class="concierge section fade-in" id="diwali-enquiry">
         <div class="container concierge-container">
             <div class="concierge-header">
-                <h2>Gifting Concierge</h2>
-                <p>Let us help you curate the perfect gift. Tell us a bit about your needs.</p>
+                <p class="section-eyebrow">From your first idea to their doorstep</p><h2>Let’s make their<br><em>Diwali special.</em></h2>
+                <p>Tell us your occasion, quantity and budget. We’ll help you find the right gifts for your people.</p>
             </div>
             
             <div class="concierge-form-wrapper">
@@ -601,10 +607,10 @@
                                 </span>
                             </label>
                             <label class="option-card">
-                                <input type="radio" name="occasion" value="Festive">
+                                <input type="radio" name="occasion" value="Diwali / Festive">
                                 <span class="card-content">
                                     <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.4L12 17l-1.9-5.6L4.5 10l5.6-1.4L12 3z"/></svg></span>
-                                    <span class="title">Festive</span>
+                                    <span class="title">Diwali / Festive</span>
                                 </span>
                             </label>
                             <label class="option-card">
@@ -691,7 +697,7 @@
         <div class="container faq-container">
             <div class="section-head">
                 <p class="section-eyebrow">Good to Know</p>
-                <h2 class="section-title">Frequently Asked Questions</h2>
+                <h2 class="section-title">A few things<br><em>you might wonder.</em></h2>
             </div>
             <div class="accordion">
                 <div class="accordion-item">
@@ -724,10 +730,11 @@
 
     <!-- Detailed Footer -->
     <footer id="contact" class="site-footer fade-in">
+        <div class="container footer-invitation"><p>Good people.<br><em>Beautifully thanked.</em></p><a href="#diwali-enquiry">Let’s plan your Diwali ↗</a></div>
         <div class="container footer-grid">
             <div class="footer-brand">
                 <h3>Get Your Gifts</h3>
-                <p>Bringing joy through thoughtful, premium gifting solutions across India.</p>
+                <p>Thoughtful gifts for the people behind your business. Curated in Bengaluru, celebrated across India.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook">FB</a>
                     <a href="#" aria-label="Instagram">IG</a>
@@ -772,7 +779,7 @@
     </a>
 
     <script src="script.js"></script>
-    <script src="diary-scene.js"></script>
-    <script src="mesa-story.js"></script>
+    <script src="diwali-story.js"></script>
+    <script src="festival-brands.js"></script>
 </body>
 </html>

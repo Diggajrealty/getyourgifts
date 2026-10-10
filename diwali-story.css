@@ -1,0 +1,45 @@
+.diwali-journey{position:relative;background:#f6efe4;color:#49293e;isolation:isolate;--lit:0;--greeting:1}
+.diwali-stage{display:none}
+.diwali-chapter{position:relative;min-height:650px;padding:80px 8%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw}
+.diwali-copy{max-width:450px}
+.diwali-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#97723c;margin-bottom:25px}
+.diwali-copy h2{font:400 clamp(40px,5.2vw,78px)/1.06 var(--font-serif);letter-spacing:-.045em;color:#49293e;margin-bottom:25px}
+.diwali-copy h2 em{color:#a47237}
+.diwali-copy>p:not(.diwali-kicker){font-size:15px;line-height:1.85;color:#796b70;max-width:330px}
+.diwali-detail{display:block;margin-top:28px;padding-top:17px;border-top:1px solid #94703a30;font-size:9px;letter-spacing:.14em;line-height:1.7;text-transform:uppercase;color:#94703a}
+.diwali-link{display:inline-flex;align-items:center;gap:24px;margin-top:25px;padding:17px 24px;background:#532c48;color:#fff7e9;font-size:12px;border-radius:2px}
+.diwali-link:hover{background:#74435f}
+.diwali-inline{width:100%;max-width:480px;justify-self:center}
+.diwali-sprite{display:block;aspect-ratio:1;background-image:url('images/diwali/unboxing-atlas.png');background-size:200% 200%;background-repeat:no-repeat}
+.sprite-base{background-position:0 0}.sprite-lid{background-position:100% 0}.sprite-diyas{background-position:0 100%}.sprite-joy{background-position:100% 100%}
+.diwali-card{aspect-ratio:4/5;background:#fffaed;border:1px solid #d3b57c;outline:1px solid #d3b57c;outline-offset:-12px;padding:15% 10%;text-align:center;box-shadow:0 22px 50px #4c273619;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.diwali-card::before{content:'✧';font:50px var(--font-serif);color:#b58a47;margin-bottom:16px}
+.diwali-card small{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#94703a}
+.diwali-card strong{font:italic 400 clamp(28px,3.5vw,52px)/1.1 var(--font-serif);color:#713e5a;margin:20px 0}
+.diwali-card p{font-size:12px;line-height:1.8;color:#8d747a;max-width:220px}
+.diwali-card .card-signature{margin-top:24px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#997543}
+.has-motion .diwali-stage{display:block;position:sticky;top:0;height:100svh;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 72% 52%,#fffaf0 0,#f6efe4 55%,#efe4d8 100%)}
+.diwali-stage::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 53%,#ffd98159,transparent 57%);opacity:var(--lit);pointer-events:none}
+.diwali-rangoli{position:absolute;width:65vw;height:65vw;right:-6vw;top:50%;transform:translateY(-50%) rotate(15deg);border:1px solid #b28a5420;border-radius:50%;background:repeating-conic-gradient(from 0deg,#bd97520a 0deg 1deg,transparent 1deg 15deg);mask-image:radial-gradient(circle,transparent 45%,#000 46%,#000 68%,transparent 69%)}
+.diwali-rangoli::before,.diwali-rangoli::after{content:'';position:absolute;inset:12%;border:1px solid #b28a5430;transform:rotate(30deg);border-radius:26%}.diwali-rangoli::after{transform:rotate(60deg)}
+.diwali-watermark{position:absolute;right:3%;top:34%;font:400 18vw/1 var(--font-serif);letter-spacing:-.06em;color:#693e5206}
+.diwali-object{position:absolute;left:0;top:0;width:min(43vw,65svh,630px);margin:0;will-change:transform,opacity;filter:drop-shadow(0 24px 18px #54293c1c);z-index:3}
+.diwali-object[data-item="1"]{z-index:7}.diwali-object[data-item="4"]{width:min(28vw,43svh,365px);z-index:6}.diwali-object[data-item="5"]{z-index:8}
+.diwali-object>img{display:block;width:100%;height:auto}
+.diwali-flame{position:absolute;left:29%;top:34%;width:3%;height:10%;border-radius:65% 35% 55% 45%;background:linear-gradient(#fffce3 10%,#ffdd72 50%,#e68b25);box-shadow:0 0 16px 7px #ffc34c70,0 0 50px 22px #ffcb4930;transform:rotate(7deg);opacity:var(--lit)}
+.diwali-flame.second{left:69%;top:52%;transform:rotate(-5deg)}
+.diwali-object .diwali-card strong{clip-path:inset(0 calc((1 - var(--greeting))*100%) 0 0)}
+.diwali-skip{position:absolute;right:5%;top:30px;font-size:10px;color:#89697a;pointer-events:auto;z-index:20}
+.diwali-rail{position:absolute;bottom:25px;left:8%;right:6%;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:20;font-size:9px;letter-spacing:.16em;color:#937a7d}
+.diwali-nav{display:flex;gap:10px;pointer-events:auto}.diwali-nav a{width:30px;height:30px;padding:14px 0}.diwali-nav a::before{content:'';display:block;height:2px;background:#94703a40}.diwali-nav a[aria-current]::before{background:#713e5a;height:3px}
+.diwali-nav a:focus-visible,.diwali-skip:focus-visible,.diwali-link:focus-visible{outline:2px solid #713e5a;outline-offset:5px}
+.diwali-progress{position:absolute;bottom:0;left:0;width:100%;height:2px;background:#ad874e;transform:scaleX(var(--progress,0));transform-origin:left}
+.has-motion .diwali-chapters{position:relative;margin-top:-100svh;pointer-events:none}
+.has-motion .diwali-chapter{height:100svh;min-height:0;display:flex;pointer-events:none;padding:12svh 8%}
+.has-motion .diwali-copy{width:36%;position:relative;z-index:15;pointer-events:auto}
+.has-motion .diwali-inline{display:none}
+@media(max-width:760px){
+ .diwali-chapter{grid-template-columns:1fr;gap:35px;min-height:0;padding:60px 8%}.diwali-copy h2{font-size:42px}.diwali-kicker{font-size:8px;margin-bottom:16px}.diwali-copy>p:not(.diwali-kicker){font-size:13px;line-height:1.7}.diwali-detail{font-size:8px;margin-top:16px;padding-top:12px}.diwali-inline{max-width:360px}.diwali-inline.diwali-card{max-width:260px}.diwali-card strong{font-size:36px}
+ .has-motion .diwali-chapter{align-items:flex-start;padding:9svh 8% 0}.has-motion .diwali-copy{width:100%;max-width:460px}.has-motion .diwali-copy h2{font-size:clamp(32px,9vw,46px);margin-bottom:14px}.has-motion .diwali-detail{display:none}.diwali-object{width:min(82vw,45svh)}.diwali-object[data-item="4"]{width:min(56vw,31svh)}.diwali-object .diwali-card strong{font-size:30px;margin:14px 0}.diwali-card::before{font-size:28px;margin-bottom:8px}.diwali-card p{font-size:10px}.diwali-card small,.diwali-card .card-signature{font-size:7px}.diwali-card .card-signature{margin-top:15px}.diwali-rangoli{width:110vw;height:110vw;right:-5vw;top:69%}.diwali-watermark{top:56%;font-size:26vw}.diwali-skip{top:22px;right:8%;font-size:8px}.diwali-rail{left:8%;right:8%;bottom:15px}.diwali-scroll-note{display:none}.diwali-nav{gap:8px}.diwali-nav a{width:26px}.diwali-link{padding:13px 19px;margin-top:18px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.diwali-journey{--greeting:1}.diwali-inline{filter:none}}
